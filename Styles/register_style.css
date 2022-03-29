@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: forestgreen;
+padding: 40px;
+}
+
+.container{
+    max-width: 850px;
+    width: 100%;
+    background: #fff;
+    padding: 45px 35px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0,0.3);
+    position: relative;
+    perspective: 2700px;
+}
+
+.container .cover{
+    position: absolute;
+    height: 60%;
+    width: 50%;
+    background-color: forestgreen;
+    left: 50%;
+    z-index: 98;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+    transform-origin: left;
+}
+
+
+.container .cover .front,
+.container .cover .back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    background-color: white;
+}
+
+
+
+.container .cover img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;   
+}
+
+.container form{
+    height:100%;
+    width: 100%; 
+    background-color: #fff;
+}
+
+.form-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-forma, .registracija-forma{
+    width: calc(50% -20px);
+}
+
+.form-content .title{
+font-size: 30px;
+font-weight: bold;
+color: #333;
+}
+
+.form-content .input-boxes{
+    margin-top: 25px;
+}
+
+.form-content .input-box{
+    height:45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+.form-content .input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 20px;
+    border-bottom: 1px solid white;
+    transition: all 0.3s ease;
+}
+
+.form-content .input-box input:hover{
+    border-color: black;
+}
+
+.input-box i{
+    position: absolute;
+    font-size: 16px;
+}
+
+.form-content .button{
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+form .button input{
+    background-color: forestgreen;
+    color: white;
+    border-radius: 10px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.form-content .text{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.form-content .text a{
+    text-decoration: none;
+}
+
+.form-content .text:hover{
+    text-decoration: underline;
+}
+
+.form-content label{
+    color: forestgreen;
+    cursor: pointer;
+}
+
+.form-content label:hover{
+    text-decoration: underline;
+}
+
+form .form-content .signup-text,
+form .form-content .login-text{
+    text-decoration: none;
+    text-align: center;
+    margin-top: 30px;
+}
+
+form .form-content .signup-text:hover,
+form .form-content .login-text:hover{
+    text-decoration: none;
+
+}
+@media screen and (max-width:520px) {
+    .container .cover{
+        display: none;
+    }
+    .form-content .login-forma, .form-content .registracija-forma{
+        width: 100%;
+    }
+}
+
+@media screen and(max-width:340px){
+    .form-content .login-forma,.form-content .registracija-forma{
+       max-width: 300px;
+        
+    }
+}

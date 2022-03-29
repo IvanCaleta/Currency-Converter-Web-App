@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: forestgreen;
+}
+
+
+
+.wrapper{
+    background-color: white;
+    width: 400px;
+    padding: 30px 25px;
+    border-radius: 10px;
+}
+
+.wrapper header{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.wrapper form{
+    margin: 40px 0 20px 0;
+}
+
+form:where(input,select,button){
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+form input{
+    border: 1px solid gray;
+    height: 50px;
+    font-size: 17px;
+    padding: 0 15px;
+}
+
+form p{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+form input:focus{
+    padding: 0 14px;
+    border: 2px solid darkgray;
+}
+
+form .drop-list{
+    display: flex;
+    align-items: center;
+    justify-self: space-between;
+    margin-top: 20px;
+}
+
+.drop-list .select-box{
+    display: flex;
+    border: 1px solid #999;
+    border-radius: 5px;
+    height: 45px;
+    width: 115px;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-box select{
+    width: auto;
+    font-size: 16px;
+    margin: 0 -5px 0 5px;
+}
+
+.select-box img{
+    max-width: 25px;
+}
+
+.drop-list .icon{
+    cursor: pointer;
+    font-size: 22px;
+    margin: 30px 15px 0 15px;
+
+}
+
+form .pretvori{
+    font-size: 20px;
+    margin: 20px 0 30px;
+}
+
+form button{
+    color: #fff;
+    height: 52px;
+    width: 80%;
+    background-color: forestgreen;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+form button p{
+    font-size: 20px;
+    padding: auto 0;
+}
+
+.select-box select::-webkit-scrollbar{
+    width: 8px;
+}
+
+.select-box select::-webkit-scrollbar-track{
+    background-color: #fff;
+}
+
+.select-box select::-webkit-scrollbar-thumb{
+    background-color: #888;
+    border-radius: 6px;
+    border-right:2px solid #fff;
+}
+
+@media screen and(max-width:380px){
+    .wrapper{
+        margin: 0;
+        padding: 0;
+    }
+}
